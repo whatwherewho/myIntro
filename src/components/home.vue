@@ -52,6 +52,7 @@
     color:#22acff;
     line-height: 2em;
     font-family: 微软雅黑;
+    font-size: 17px;
     font-weight: bold;
   }
   a:visited,a:link{

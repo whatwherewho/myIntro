@@ -10,7 +10,7 @@
     <p v-show="showlink">https://github.com/whatwherewho/dnfweb</p>
   </transition>
   <transition name="linkintro" enter-active-class="target-fade-in" leave-active-class="target-fade-out" enter-class="hide" leave-to-class="hide">
-    <p v-show="showintro">这个链接里的工程使用nodejs+express+mysql完成</p>
+    <p v-show="showintro">这个链接里的工程使用nodejs+express+mysql完成，是一个仿资料站形式的工程</p>
   </transition>
 </div>
 </template>
@@ -38,6 +38,7 @@
   margin-top:20px;
   color:#22acff;
   line-height: 2em;
+  font-size: 17px;
   font-family: 微软雅黑;
   font-weight: bold;
 }
