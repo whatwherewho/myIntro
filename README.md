@@ -1,21 +1,5 @@
-# myself
+这是一个使用vue-cli工具搭建的一个vue工程。
 
-> introduction
+在基础之上额外安装了sass-loader，但已添加到package.json内，所以npm install即可。
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+由于修改了config文件夹里的index.js文件里assetsPublicPath为"./"，因此可以直接打开dist文件夹里的index.html查看

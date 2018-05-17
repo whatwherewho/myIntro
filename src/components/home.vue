@@ -51,7 +51,7 @@
     margin-top:20px;
     color:#22acff;
     line-height: 2em;
-    font-family: 微软雅黑;
+    font-family: "Microsoft YaHei UI";
     font-size: 17px;
     font-weight: bold;
   }

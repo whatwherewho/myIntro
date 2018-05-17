@@ -32,12 +32,18 @@
       methods:{
           getPrev:function () {
             var pagePrev = this.introID;
-            location.href="/#/myIntro/"+ pagePrev;
+            var hrefArr = location.href.split("/");
+            hrefArr[hrefArr.length-1]= pagePrev;
+            location.href=hrefArr.join("/");
+            // location.href="/#/myIntro/"+ pagePrev;
             this.$emit('visiting',pagePrev);
           },
           getNext:function () {
             var pageNext = this.introID+2;
-            location.href="/#/myIntro/"+pageNext;
+            var hrefArr = location.href.split("/");
+            hrefArr[hrefArr.length-1]= pageNext;
+            location.href=hrefArr.join("/");
+            // location.href="/#/myIntro/"+pageNext;
             this.$emit('visiting',pageNext);
           }
 /*         introFadeIn:function () {
@@ -73,7 +79,7 @@
     font-size: 18px;
     text-indent: 2em;
     line-height: 1.5em;
-    font-family: "楷体",'Avenir', Helvetica, Arial, sans-serif;
+    font-family: "KaiTi",'Avenir', Helvetica, Arial, sans-serif;
   }
 }
 .prev-next-btn{

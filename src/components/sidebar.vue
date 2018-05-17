@@ -3,7 +3,7 @@
       <div id="closeBtn" @click="$emit('close')"><<</div>
       <h2>介绍列表</h2>
       <div class="searchPart">
-        <input type="number" v-model="passage" min="1" max="6"/>
+        <input type="number" v-model="passage" min="1" v-bind:max="arr.length" />
         <button type="button" id="searchBtn" @click="searchPassage">点击这里查看第<span>{{passage}}</span>篇介绍</button>
       </div>
       <div class="allIntroList">
@@ -39,12 +39,21 @@
             this.$emit('visiting',this.passage);
             alert("篇数不能小于1");
           }
-          else if(this.passage>6){
-            this.passage=6;
+          else if(this.passage>this.arr.length){
+            this.passage=this.arr.length;
             this.$emit('visiting',this.passage);
             alert("篇数不能超出上限");
           }
-          location.href = "/#/myIntro/"+ this.passage;
+          else{
+            console.log(this.passage);
+            this.$emit('visiting',this.passage);
+          }
+          var hrefArr = location.href.split("/");
+          hrefArr[hrefArr.length-1]= this.passage;
+          location.href=hrefArr.join("/");
+
+          // location.href = "/#/myIntro/"+ this.passage;
+
         },
         adjustNum:function () {
           if(this.passage<=0){
